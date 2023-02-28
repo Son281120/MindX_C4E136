@@ -21,3 +21,12 @@ function perfectNumber(a) {
 }
 
 perfectNumber(12);
+
+function sum (n) {
+    if (n <= 1) {
+        return 1;
+    }else {
+        return n + sum(n - 1);
+    }
+}
+
