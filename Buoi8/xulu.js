@@ -70,18 +70,18 @@ console.log(tongtien(arraySanPham));
 // =================================================================
 
 
-const array = [1,2,4,6,8,9,10]
-const array1 = [2,3,5,6,7,8];
+const array1 = [2,3,3,3,5];
 
+const array2 = [1,2,3];
 
 
 
 
 
 const arrayResult = [];
-const arrrayConcat = array.concat(array1);
+const arrrayConcat = array1.concat(array2);
 for (let i = 0; i < arrrayConcat.length; i++) {
-    if(!(array.includes(arrrayConcat[i]) && array1.includes(arrrayConcat[i] ))) {
+    if(!(array1.includes(arrrayConcat[i]) && array2.includes(arrrayConcat[i] ))) {
         arrayResult.push(arrrayConcat[i])
     }
 }
@@ -95,7 +95,7 @@ function duyetMang (arr1, arr2) {
     const arrayResult = [];
     const arrrayConcat = arr1.concat(arr2);
     for (let i = 0; i < arrrayConcat.length; i++) {
-        if(!(arr1.includes(arrrayConcat[i]) && arr2.includes(arrrayConcat[i] ))) {
+        if(!(arr1.includes(arrrayConcat[i]) && arr2.includes(arrrayConcat[i]) && arrayResult.includes(arrrayConcat[i]))) {
             arrayResult.push(arrrayConcat[i])
         }
     }
@@ -104,4 +104,38 @@ function duyetMang (arr1, arr2) {
 }
 
 
-console.log(duyetMang(array,array1));
+
+console.log(duyetMang(array1,array2));
+
+
+function findMax (arr1, arr2) {
+    const arrayConcat = arr1.concat(arr2);
+    let valueMax = 0;
+    for (let i = 0; i < arrayConcat.length; i++) {
+        if(valueMax < arrayConcat[i]){
+            valueMax = arrayConcat[i]
+        }        
+    }
+
+    return valueMax;
+}
+
+console.log(findMax(array1,array2));
+
+function arrangeArr(arr1, arr2) {
+    const arrayConcat = arr1.concat(arr2);
+    for(let i = 0; i < arrayConcat.length; i++) {
+        for(let j = i+1; i< arrayConcat.length; j++){
+            if(arrayConcat[i]>arrayConcat[j]){
+                let temp = arrayConcat[i];
+                arrayConcat[i] = arrayConcat[j];
+                arrayConcat[j] = temp;
+            }
+        }
+    }
+    return arrayConcat;
+}
+
+const arrayOK = arrangeArr(array1,array2)
+
+console.log(arrayOK);

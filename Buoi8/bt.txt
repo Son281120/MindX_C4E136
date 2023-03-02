@@ -31,3 +31,22 @@ Ví dụ 2: số 6
 Ví dụ:
 
 - số 6: 1,2,3,6 ⇒ 4 ước
+
+
+//================================================================
+// bt 1 
+
+const array1 = [2,3,3,3,5];
+
+const array2 = [1,2,3];
+
+====> [1,2,3]
+
+// bt2 
+
+//tim gia tri max của 2 mang array1 , array2 
+
+
+// bt3 
+
+// sap xep mang sau khi noi tang dan và giam dann
