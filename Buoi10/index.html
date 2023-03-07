@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="mt">
+        <label for="so1">Số 1:</label>
+        <input type="number" id="so1" onchange="onChangeValueInput1()"><br>
+        <label for="">Số 2:</label>
+        <input type="number" id="so2" onchange="onChangeValueInput2()"><br>
+        <button value="+" class="btn-cong" onclick="clickGetValue(`+`)">Phép cộng</button>
+        <button value="-" class="btn-tru" onclick="clickGetValue(`-`)">Phép trừ</button>
+        <button value="*" class="btn-nhan" onclick="clickGetValue(`*`)">Phép nhân</button>
+        <button value="/" class="btn-chia" onclick="clickGetValue(`/`)">Phép chia</button><br>
+        <button class="btn-kq" onclick="viewResult()">Kết quả</button>
+        <label for="" class="kq"></label>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
